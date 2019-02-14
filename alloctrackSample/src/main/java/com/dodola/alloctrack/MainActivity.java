@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 100;
 
     @BindView(R.id.dump_log)
-    private Button dumpLogBtn;
+    Button dumpLogBtn;
 
     private AllocTracker tracker = new AllocTracker();
     private File         externalReportPath;
