@@ -11,7 +11,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                abiFilters "armeabi-v7a","x86"
+                abiFilters "armeabi-v7a", "x86"
             }
         }
     }
@@ -26,6 +26,11 @@ android {
             path "src/main/cpp/CMakeLists.txt"
         }
     }
+
+    compileOptions {
+        android.compileOptions.sourceCompatibility 1.8
+        android.compileOptions.targetCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -35,4 +40,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.jakewharton:butterknife:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
 }
